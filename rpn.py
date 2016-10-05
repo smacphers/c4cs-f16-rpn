@@ -16,11 +16,13 @@ def calculate(myarg):
 		else:
 			stack.append(int(token))
 		print(stack)
+	if len(stack) != 1:
+		raise TypeError ("Too many paramters")
 	return stack.pop()
 
 def main():
 	while True:
-		calculate(input("rpn calc> "))
-
+		result = calculate(input("rpn calc> "))
+		print("Result: ", result)
 if __name__ == '__main__':
 	main()
