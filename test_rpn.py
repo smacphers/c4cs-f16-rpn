@@ -18,3 +18,6 @@ class TestBasics(unittest.TestCase):
 	def test_divide(self):
 		result = rpn.calculate("25 5 /")
 		self.assertEqual(5, result)
+	def test_carat(self):
+		result = rpn.calculate("2 3 ^")
+		self.assertEqual(8, result)
